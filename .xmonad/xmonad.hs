@@ -120,7 +120,7 @@ myStartupHook = do
     -- spawnOnce "find ~/wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch"  -- set random xwallpaper
     -- spawnOnce "~/.fehbg &"  -- set last saved feh wallpaper
     -- spawnOnce "feh --randomize --bg-fill ~/wallpapers/*"  -- feh set random wallpaper
-    setWMName "LG3D"
+    setWMName "My Own"
 
 myColorizer :: Window -> Bool -> X (String, String)
 myColorizer = colorRangeFromClassName
@@ -368,6 +368,7 @@ myKeys =
 
     -- KB_GROUP Useful programs to have a keybinding for launch
         , ("M-<Return>", spawn (myTerminal))
+        , ("M-S-s", spawn "flameshot gui -p ~/media/images/screenshots")
 
     -- KB_GROUP Kill windows
         , ("M-w", kill1)     -- Kill the currently focused client
