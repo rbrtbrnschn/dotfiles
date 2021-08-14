@@ -88,6 +88,9 @@ myEditor :: String
 myEditor = "vim"  -- Sets emacs as editor
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
+myFileManager :: String
+myFileManager = myTerminal ++ " --title ranger -e ranger"
+
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 
@@ -334,6 +337,7 @@ myManageHook = composeAll
      , className =? "toolbar"         --> doFloat
      , className =? "Yad"             --> doCenterFloat
      , title =? "Oracle VM VirtualBox Manager"  --> doFloat
+     , title=? "ranger"               --> doCenterFloat
      , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
      , className =? "brave-browser"   --> doShift ( myWorkspaces !! 1 )
      , className =? "qutebrowser"     --> doShift ( myWorkspaces !! 1 )
@@ -355,6 +359,7 @@ myKeys =
 
     -- KB_GROUP Run Prompt
         , ("M-S-<Return>", spawn (myTerminal ++ " -t scratchpad")) -- Dmenu
+        , ("M-r", spawn (myFileManager)) -- Dmenu
 
     -- KB_GROUP Other Dmenu Prompts
     -- In Xmonad and many tiling window managers, M-p is the default keybinding to
