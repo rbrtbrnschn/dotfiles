@@ -1,0 +1,10 @@
+
+xmonad.hs:413:37: error:
+    • Data constructor not in scope: LastLayout
+    • Perhaps you meant one of these:
+        ‘NextLayout’ (imported from XMonad),
+        ‘FirstLayout’ (imported from XMonad),
+        variable ‘setLayout’ (imported from XMonad)
+    |
+413 |         , ("M-S-<Tab>", sendMessage LastLayout)           -- Switch to next layout
+    |                                     ^^^^^^^^^^
