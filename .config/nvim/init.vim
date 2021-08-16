@@ -32,12 +32,3 @@ set shiftwidth=2
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
-
-" TODO Move to Seperate File
-lua << EOF
-  require("zen-mode").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
