@@ -39,4 +39,6 @@ function read_info() {
   write_alias_to_file "${file}" "${line}"
 }
 
-read_info
+function add_alias() {
+  read_info $@
+}

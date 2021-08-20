@@ -14,6 +14,10 @@ BASHD_RUN=${BASHD_HOME}/run.sh
 test -f ${BASHD_EXPORTS} && . ${BASHD_EXPORTS}
 test -f ${BASHD_MISC} && . ${BASHD_MISC}
 test -f ${BASHD_RUN} && . ${BASHD_RUN}
+
+for file in $(ls $BASHD_FUNCTIONS); do
+  test -f $BASHD_FUNCTIONS/$file && . $BASHD_FUNCTIONS/$file;
+done
 # Bash.D Config #
 
 # NVM
