@@ -10,8 +10,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'neoclide/coc.nvim', {'branch':'release'}
 	Plug 'folke/zen-mode.nvim'
-
+  Plug 'preservim/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'joukevandermaas/vim-ember-hbs'
 call plug#end()
+
+so ~/.config/nvim/keybinds/nerdtree.vim
 
 if (has("termguicolors"))
 	set termguicolors
@@ -32,3 +36,6 @@ set shiftwidth=2
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
+
+set encoding=UTF-8
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
